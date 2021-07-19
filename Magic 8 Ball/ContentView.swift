@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var degrees = 0
     @State private var move = false
     @State private var showAnswer = false
-
+    let answers = ["Yes - definitely", "It is decidedly so", "Without a doubt", "Reply hazy, try again", "Ask again later", "Better not tell you now", "My sources say no", "Outlook not so good", "Very doubtful"]
     var body: some View {
         ZStack{
             Color.black
@@ -30,15 +30,17 @@ struct ContentView: View {
                     .rotationEffect(.degrees(180))
                     .blur(radius: 2)
                 if showAnswer {
-                    Text("Text Here".uppercased())
+                    Text(answers[Int.random(in: 0..<answers.count)].uppercased())
                         .font(.headline)
 
                         .fontWeight(.thin)
+                        .multilineTextAlignment(.center)
                         .frame(width: 100, height: 100, alignment: .top)
                         .foregroundColor(.yellow)
                         .shadow(color: .yellow, radius: 5, x: 0.0, y: 0.0)
                         .blur(radius: 0.4)
                         .transition(.modifiedTransition)
+                        .animation(.interpolatingSpring(stiffness: 5, damping: 1))
 
 
                 }
@@ -57,9 +59,11 @@ struct ContentView: View {
 
 
         }
-        .onTapGesture {
+
+        .onShake {
             degrees += Int.random(in: -20...20)
-                move = true
+            move = true
+            showAnswer = false
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     degrees = 0
@@ -73,12 +77,6 @@ struct ContentView: View {
                     }
 
                 }
-
-
-        }
-
-        .onShake {
-            //code here
         }
     }
 }
