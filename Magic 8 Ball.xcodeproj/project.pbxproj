@@ -12,6 +12,7 @@
 		BD81BD4726A606F800B6A8F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD81BD4626A606F800B6A8F4 /* Assets.xcassets */; };
 		BD81BD4A26A606F800B6A8F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD81BD4926A606F800B6A8F4 /* Preview Assets.xcassets */; };
 		BD81BD5826A60C1200B6A8F4 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81BD5726A60C1200B6A8F4 /* Triangle.swift */; };
+		BD81BD5E26A617E700B6A8F4 /* DeviceShakeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BD81BD4926A606F800B6A8F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD81BD4B26A606F800B6A8F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD81BD5726A60C1200B6A8F4 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceShakeViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				BD81BD4226A606F700B6A8F4 /* Magic_8_BallApp.swift */,
 				BD81BD4426A606F700B6A8F4 /* ContentView.swift */,
 				BD81BD5726A60C1200B6A8F4 /* Triangle.swift */,
+				BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */,
 				BD81BD4626A606F800B6A8F4 /* Assets.xcassets */,
 				BD81BD4B26A606F800B6A8F4 /* Info.plist */,
 				BD81BD4826A606F800B6A8F4 /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				BD81BD5826A60C1200B6A8F4 /* Triangle.swift in Sources */,
 				BD81BD4526A606F700B6A8F4 /* ContentView.swift in Sources */,
+				BD81BD5E26A617E700B6A8F4 /* DeviceShakeViewModifier.swift in Sources */,
 				BD81BD4326A606F700B6A8F4 /* Magic_8_BallApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
