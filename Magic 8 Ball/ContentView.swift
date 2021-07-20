@@ -14,16 +14,9 @@ struct ContentView: View {
     let answers = ["Yes - definitely", "It is decidedly so", "Without a doubt", "Reply hazy, try again", "Ask again later", "Better not tell you now", "My sources say no", "Outlook not so good", "Very doubtful"]
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.black, .black.opacity(0.9)]), startPoint: .bottomTrailing, endPoint: .topLeading)
+            Color.black
                 .ignoresSafeArea()
-            Circle()
-                .fill(.black.opacity(0.3))
-                .frame(width: 300, height: 300, alignment: .center)
-                .offset(y: -15)
 
-
-
-            ZStack {
                 ZStack {
                     RadialGradient(gradient: Gradient(colors: [ .blue, Color(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1))]), center: .center, startRadius: 1, endRadius: 200)
                         .frame(width: 200, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -63,12 +56,10 @@ struct ContentView: View {
                 )
                 .animation(Animation.interpolatingSpring(stiffness: 5, damping: 1)
             )
-            }
+
 
             .frame(width: 300, height: 300, alignment: .center)
-            .overlay(Circle()
-                        .stroke(Color.gray.opacity(0.1), lineWidth: 10)
-                        .offset(y: -15))
+
             
 
 
