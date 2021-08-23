@@ -84,8 +84,7 @@ struct ContentView: View {
 
                     }
                 }
-                .padding(.vertical, 300)
-                .padding(.horizontal, 70)
+                .frame(width: 300, height: 300, alignment: .center)
                     .onAppear(perform: {
                         self.isShaking.toggle()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
