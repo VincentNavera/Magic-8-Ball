@@ -12,6 +12,9 @@ struct ContentView: View {
     @State private var move = false
     @State private var showAnswer = false
     let answers = ["Yes - definitely", "It is decidedly so", "Without a doubt", "Reply hazy, try again", "Ask again later", "Better not tell you now", "My sources say no", "Outlook not so good", "Very doubtful"]
+    @ObservedObject var userSettings = UserSettings()
+
+    
     var body: some View {
         ZStack{
             Color.black
@@ -43,6 +46,15 @@ struct ContentView: View {
                             .animation(.interpolatingSpring(stiffness: 5, damping: 1))
 
 
+                    }
+                    if userSettings.isFirstLoad {
+                        Image(systemName: "trash")
+                            .onAppear(perform: {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    userSettings.isFirstLoad = false
+                                
+                                }
+                            })
                     }
 
 
