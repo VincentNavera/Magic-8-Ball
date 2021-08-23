@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var showAnswer = false
     let answers = ["Yes - definitely", "It is decidedly so", "Without a doubt", "Reply hazy, try again", "Ask again later", "Better not tell you now", "My sources say no", "Outlook not so good", "Very doubtful"]
     @ObservedObject var userSettings = UserSettings()
+    @State private var isShaking = false
 
     
     var body: some View {
@@ -47,15 +48,8 @@ struct ContentView: View {
 
 
                     }
-                    if userSettings.isFirstLoad {
-                        Image(systemName: "trash")
-                            .onAppear(perform: {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                                    userSettings.isFirstLoad = false
-                                
-                                }
-                            })
-                    }
+
+
 
 
                 }
@@ -71,6 +65,36 @@ struct ContentView: View {
 
 
             .frame(width: 300, height: 300, alignment: .center)
+
+            if userSettings.isFirstLoad {
+                ZStack {
+                    VisualEffectView(style:.systemUltraThinMaterialLight)
+                        .cornerRadius(24)
+                    .opacity(0.8)
+
+                    VStack {
+                        Image(systemName: "iphone")
+                            .font(Font.custom("", size: 70).weight(.heavy))
+                            .rotationEffect(.degrees(isShaking ? 4 : -4))
+                            .animation(Animation.easeInOut(duration: 0.15).repeatForever(autoreverses: true))
+
+
+                    Text("ASK a qustion,\n then SHAKE your device")
+                        .multilineTextAlignment(.center)
+
+                    }
+                }
+                .padding(.vertical, 300)
+                .padding(.horizontal, 70)
+                    .onAppear(perform: {
+                        self.isShaking.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            userSettings.isFirstLoad = false
+
+
+                        }
+                    })
+            }
 
             
 

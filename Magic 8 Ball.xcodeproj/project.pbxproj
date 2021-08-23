@@ -14,6 +14,7 @@
 		BD81BD5826A60C1200B6A8F4 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81BD5726A60C1200B6A8F4 /* Triangle.swift */; };
 		BD81BD5E26A617E700B6A8F4 /* DeviceShakeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */; };
 		BDF7150826D38BD80059D988 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF7150726D38BD70059D988 /* UserSettings.swift */; };
+		BDF7150A26D38D520059D988 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF7150926D38D510059D988 /* VisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BD81BD5726A60C1200B6A8F4 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceShakeViewModifier.swift; sourceTree = "<group>"; };
 		BDF7150726D38BD70059D988 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		BDF7150926D38D510059D988 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				BD81BD4226A606F700B6A8F4 /* Magic_8_BallApp.swift */,
 				BD81BD4426A606F700B6A8F4 /* ContentView.swift */,
 				BDF7150726D38BD70059D988 /* UserSettings.swift */,
+				BDF7150926D38D510059D988 /* VisualEffectView.swift */,
 				BD81BD5726A60C1200B6A8F4 /* Triangle.swift */,
 				BD81BD5D26A617E700B6A8F4 /* DeviceShakeViewModifier.swift */,
 				BD81BD4626A606F800B6A8F4 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				BD81BD5E26A617E700B6A8F4 /* DeviceShakeViewModifier.swift in Sources */,
 				BDF7150826D38BD80059D988 /* UserSettings.swift in Sources */,
 				BD81BD4326A606F700B6A8F4 /* Magic_8_BallApp.swift in Sources */,
+				BDF7150A26D38D520059D988 /* VisualEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
